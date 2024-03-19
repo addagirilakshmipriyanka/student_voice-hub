@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Request for Online Voting</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles -->
+   <style>
+
+body {
+            background-color: #f5f5f5;  /* light gray */
+        }
+        .custom-form {
+            max-width: 600px;  /* Width of the form */
+            margin: 5% auto;   /* Centering the form vertically and horizontally */
+        }
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  margin-left:5px;
+}
+</style>
+  
+    </style>
+</head>
+<body>
+<div class="container custom-form">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="text-center">Request for election</h2>
+            <form action="/submit" method="post">
+                <!-- Election Name -->
+                <div class="form-group">
+                    <label for="electionName">Election Name:</label>
+                    <input type="text" class="form-control" id="electionName" name="electionName" required>
+                </div>
+
+   <div class="form-group">
+                    <label for="electionName">candidate eligibity</label>
+                    <input type="text" class="form-control" id="electionName" name="electionName" required>
+                </div>
+<div class="container">                                       
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">voter eligibity
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">      
+      
+      <li class="dropdown-submenu">
+       
+        <a class="test" tabindex="-1" href="#">year-1 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">CSE<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">ECE<ECEspan class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">EEE<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">MECH<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">CIVIL<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        
+      </li>
+      <li class="dropdown-submenu">
+       
+        <a class="test" tabindex="-1" href="#">year-2 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">CSE<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">ECE<ECEspan class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">EEE<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">MECH<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">CIVIL<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        
+      </li>
+      <li class="dropdown-submenu">
+       
+        <a class="test" tabindex="-1" href="#">year-3 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">CSE<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">ECE<ECEspan class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">EEE<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">MECH<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">CIVIL<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        
+      </li>
+      <li class="dropdown-submenu">
+       
+        <a class="test" tabindex="-1" href="#">year-4 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="test" href="#">CSE<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">ECE<ECEspan class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">EEE<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">MECH<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">CIVIL<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">section-1</a></li>
+              <li><a href="#">section-2</a></li>
+               <li><a href="#">section-3</a></li>
+              <li><a href="#">section-4</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+
+                <!-- Candidate Registration Date & Time -->
+                <div class="form-group">
+                    <label for="startDateTimeReg">candidate starting time:</label>
+                    <input type="datetime-local" class="form-control" id="startDateTimeReg" name="startDateTimeReg" required>
+
+                    <label for="endDateTimeReg">Candidate ending time:</label>
+                    <input type="datetime-local" class="form-control" id="endDateTimeReg" name="endDateTimeReg" required>
+                </div>
+
+                <!-- Voter Voting Date & Time -->
+                <div class="form-group">
+                    <label for="startDateTimeVote">Voter starting time:</label>
+                    <input type="datetime-local" class="form-control" id="startDateTimeVote" name="startDateTimeVote" required>
+
+                    <label for="endDateTimeVote">voter ending time:</label>
+                    <input type="datetime-local" class="form-control" id="endDateTimeVote" name="endDateTimeVote" required>
+                </div>
+
+                <!-- Description of the Election -->
+                <div class="form-group">
+                    <label for="description">Description :</label>
+                    <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

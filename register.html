@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Registration</title>
+    <!-- Bootstrap CSS and Font Awesome for Icons -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <style>
+        /* Custom background color for the form */
+        .registration-form {
+            background-color: #f3f4f6;
+            padding: 30px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="registration-form">
+                   <h2 class="text-center mb-4">Candidate Registration</h2>
+                    <form action="your-backend-processing-script.php" method="post" enctype="multipart/form-data">
+                        <!-- Photo upload at the top center -->
+                        <div class="text-center mb-4">
+                            <label class="d-block">
+                                <img src="placeholder-image-path.jpg" alt="Upload Photo" class="rounded-circle mb-2" width="100" id="photoPreview">
+                                <input type="file" name="photo" style="display: none;" onchange="previewImage(event)">
+                                <div><small></small></div>
+                            </label>
+                        </div>
+                        <!-- Editable Name field -->
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="name" placeholder="Enter your name">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-edit"></i></span>
+                            </div>
+                        </div>
+                        <!-- Email field -->
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="Enter your email">
+                        </div>
+                        <!-- Dropdowns for Year, Branch, and Section -->
+                        <div class="form-group">
+                            <select class="form-control mb-3" name="year">
+                                <option value="" disabled selected>Choose Year</option>
+                                <option>1st Year</option>
+                                <option>2nd Year</option>
+                                <option>3rd Year</option>
+                                <option>4th Year</option>
+                            </select>
+                            <select class="form-control mb-3" name="branch">
+                                <option value="" disabled selected>Choose Branch</option>
+                                <option>Computer Science and engineering</option>
+                                <option>Electronics and Communication</option>
+                                <option>Mechanical Engineering</option>
+                                <option>electrical and electronical Engineering</option>
+                                <option>civil Engineering</option>
+                            </select>
+                            <select class="form-control mb-3" name="section">
+                                <option value="" disabled selected>Choose Section</option>
+                                <option>section-1</option>
+                                <option>section-2</option>
+                                <option>section-3</option>
+                                 <option>section-4</option>
+                            </select>
+                        </div>
+                        <!-- Description text area -->
+                        <div class="form-group">
+                            <textarea class="form-control" name="description" rows="4" placeholder="Description"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript for Image Preview -->
+    <script>
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var output = document.getElementById('photoPreview');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,50 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+.cir h1{
+    text-align: center;
+    justify-content: center;
+    padding-top: 40px;
+    font-size: 30px;
+    color:#113333;
+}
+.circular{
+    background-color:lightblue;
+    padding-bottom: 385px;
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
+    height:100%;
+    
+}
+  
+.circular-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Creates a circular shape */
+    overflow: hidden; /* Clips content outside the circular shape */
+    background-color: #fff; /* Background color for the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+.circular-image {
+    width: 80%;
+    height: 60%;
+}
+
+.why a{
+        text-decoration: none; 
+}
+
+.card {
+    /* background-color:lightskyblue; */
+    border: none;
+    padding: 80px;
+    margin: 120px;
+    text-align: center;
+}
+.card-link {
+    display: block;
+    text-decoration: none;
+}

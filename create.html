@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election System</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Set the background color to gray */
+        }
+        .container {
+            background-color: #ffffff; /* Set the container background color to white */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px; /* Set a suitable form width */
+            margin: 0 auto; /* Center the form on the page */
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+    <div class="container">
+        <h3><center>election create by admin</centre></h1>
+   <form id="votingForm" method="post" action="create.html">
+            <!-- Election Name -->
+            <div class="form-group">
+                <label for="electionName">Election Name:</label>
+                <input type="text" class="form-control" id="electionName" name="electionName" required>
+            </div>
+            
+            <!-- Number of Candidates -->
+            <div class="form-group">
+                <label for="numCandidates">Number of Candidates:</label>
+                <input type="number" class="form-control" id="numCandidates" name="numCandidates" min="1" required>
+            </div>
+
+            <!-- Candidate Information Divisions -->
+            <div id="candidateDivisions">
+                <!-- Candidate input divisions will be added here using JavaScript -->
+            </div>
+            
+           
+           <div class="form-group">
+                        <div class="form-group">
+                <label for="candidateStartTime">voting Start Time:</label>
+                <input type="text" class="form-control" id="candidateStartTime" name="candidateStartTime" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="candidateEndTime">voting End Time:</label>
+                <input type="text" class="form-control" id="candidateEndTime" name="candidateEndTime" required>
+            </div>
+                    <!-- Description of the Election -->
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+                    </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery (required for dynamic candidate input divisions) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include Flatpickr JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        // Add input divisions for candidate details based on the number entered
+        $('#numCandidates').on('input', function () {
+            const numCandidates = $(this).val();
+            const candidateDivisions = $('#candidateDivisions');
+            candidateDivisions.empty();
+
+            for (let i = 1; i <= numCandidates; i++) {
+                const candidateDivision = `
+                <div class="card bg-light mb-3">
+                    <div class="card-header">Candidate ${i} Information</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="candidateName${i}">Name:</label>
+                            <input type="text" class="form-control" id="candidateName${i}" name="candidateName${i}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="candidateEmail${i}">Email:</label>
+                            <input type="email" class="form-control" id="candidateEmail${i}" name="candidateEmail${i}" required>
+                        </div>
+                    </div>
+                </div>`;
+                candidateDivisions.append(candidateDivision);
+            }
+        });
+        
+          // Initialize Flatpickr for candidate start and end time inputs
+        const candidateStartTimeInput = document.getElementById("candidateStartTime");
+        const candidateEndTimeInput = document.getElementById("candidateEndTime");
+
+        flatpickr(candidateStartTimeInput, {
+            enableTime: true,
+            minDate: "today",
+        });
+
+        flatpickr(candidateEndTimeInput, {
+            enableTime: true,
+            minDate: "today",
+        });
+
+        // Validate candidate start and end times
+        $('#votingForm').on('submit', function (event) {
+            const startTime = new Date(candidateStartTimeInput.value).getTime();
+            const endTime = new Date(candidateEndTimeInput.value).getTime();
+            const now = new Date().getTime();
+            const yesterday = new Date(now - 24 * 60 * 60 * 1000).getTime(); // 24 hours ago
+            
+            if (startTime >= endTime) {
+                alert("voting start time should be earlier than the end time.");
+                event.preventDefault(); // Prevent form submission
+            }
+            
+            if (startTime <= yesterday || endTime <= yesterday) {
+                alert("voting start and end times cannot be in the past 24 hours or earlier.");
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>
