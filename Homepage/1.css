@@ -1,0 +1,223 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+.image{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(to bottom,rgb(17, 51, 51, 0.5), #3d486f),url(vote.jpg);
+}
+
+
+/*--------Course---------*/
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 70px;
+    margin-bottom: 40px;
+
+  
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+
+   
+}
+
+.course-col{
+    flex-basis: 28%;
+    
+    margin-bottom: 5%;
+    
+
+    p{
+        color: #faf6f6;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 22px;
+        padding: 10px;
+    }
+    h2{
+        text-align: center;
+        font-weight: 600;
+        margin: 10px;
+      }
+}
+
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgb(61, 72, 111,0.4);
+    margin-bottom: 10px;
+   
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+
+
+.image-container {
+    flex: 1; /* This makes all containers take equal width */
+    margin: 15px; /* Adjust as needed */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*------------------Buttons section------------------*/
+
+.button-section {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1430px;
+    background-color: grey;
+    
+
+}
+
+.column {
+    flex: 1;
+    flex-direction: column;
+    padding: 100px;
+    justify-content:stretch;
+    
+}
+
+.button {
+    display: block;
+    width: 80%;
+    padding: 20px 10px;
+    text-align: center;
+    background-color: #ffffffce;
+    color: #0a0a0a;
+    margin: 10px 0px 15px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 0px;
+
+}
+
+/*------Indisputable results----------------*/
+
+.online-elections {
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 40px;
+    
+    
+}
+
+.online-elections h1 {
+    font-size: 35px;
+    font-weight: 600;
+    color: #3d486f;
+    font-family: sans-serif;
+    
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.textt {
+    flex: 1;
+    padding: 50px;
+}
+
+.textt p {
+    font-size: 20px;
+    color: #555;
+}
+
+.im {
+    flex: 1;
+    text-align: center;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+}
+
+
+/*--------Circular---------*/
+.cir p {
+        color: #faf6f6;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 50px;
+        margin-left: 70px;
+        font-family: sans-serif;
+
+}
+.cir h1{
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 25px;
+    color:#fff;
+}
+.circular{
+    background-color: #3d486f;
+    padding-top: 70px;
+    padding-bottom: 300px;
+    display: flex;
+    width:100%;
+    
+    
+}
+  
+.circular-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Creates a circular shape */
+    overflow: hidden; /* Clips content outside the circular shape */
+    background-color: #fff; /* Background color for the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 190px;
+    margin-right: 50px;
+
+}
+.circular-image {
+    width: 70%;
+    height: 60%;
+}
+
+.why h2{
+       font-size: 36px;
+        font-weight: 600;
+        background-color: #3d486f;
+        text-align: center;
+        padding-top: 20px;
+        color: white;
+        border-bottom: #c7c8cf;
+    }
